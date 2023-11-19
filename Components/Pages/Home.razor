@@ -1,0 +1,30 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using StickyNotes.Components.Components
+
+<PageTitle>Home</PageTitle>
+
+<button @onclick="AddNote">Add Note</button>
+	
+@foreach (var note in notes)
+{
+    <Note OnDelete="() => DeleteNote(note)" />
+}
+
+@code {
+    private List<NoteModel> notes = new List<NoteModel>();
+
+    private void AddNote()
+    {
+        notes.Add(new NoteModel());
+   		StateHasChanged();
+    }
+
+    private void DeleteNote(NoteModel noteToDelete)
+    {
+        notes.Remove(noteToDelete);
+    }
+
+    // Define a NoteModel class or use an existing model that represents a note
+    private class NoteModel { }
+}

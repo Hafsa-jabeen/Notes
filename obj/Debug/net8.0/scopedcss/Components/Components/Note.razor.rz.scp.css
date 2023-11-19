@@ -1,0 +1,32 @@
+.note-container[b-90jejpezvh] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-container textarea[b-90jejpezvh] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: vertical; /* Allows vertical resizing, not horizontal */
+    min-height: 100px; /* Minimum height */
+}
+
+.note-container button[b-90jejpezvh] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.note-container button:hover[b-90jejpezvh] {
+    background-color: #c82333;
+}

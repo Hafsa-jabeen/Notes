@@ -1,0 +1,21 @@
+﻿@code {
+    private string noteContent;
+}
+
+<div class="note-container">
+    <textarea @bind="noteContent" placeholder="Write your note here..."></textarea>
+    <button @onclick="DeleteNote">Delete Note</button>
+</div>
+
+@code {
+    // You can define an EventCallback if you want to notify a parent component
+    [Parameter]
+    public EventCallback OnDelete { get; set; }
+
+    private void DeleteNote()
+    {
+        // Logic to delete the note
+        // If this component is part of a collection, you might want to call OnDelete to notify the parent to remove it
+        OnDelete.InvokeAsync(null);
+    }
+}
